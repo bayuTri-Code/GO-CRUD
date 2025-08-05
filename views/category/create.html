@@ -44,28 +44,32 @@
     <!-- end navbar -->
 
     <div class="container mt-3">
-      <h2>Create Category</h2>
-      <hr />
-
-      <form action="/category/add">
-        <div class="mb-3">
-          <label class="form-label"
-            >Name</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            name="name"
-            placeholder="Enter category name"
-            autocomplete="off"
-          />
-          <div class="float-end">
-            <a href="/category" class="btn btn-secondary">back</a>
-            <button type="submit" class="btn btn-primary">Add</button>
-          </div>
-
+        <div class="row d-flex justify-content-center">
+            <div class="col-4 ">
+                <h2>Create Category</h2>
+                <hr />
+          
+                <form action="/category/add">
+                  <div class="mb-3">
+                    <label class="form-label"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      placeholder="Enter category name"
+                      autocomplete="off"
+                    />
+                    <div class="float-end mt-3">
+                      <a href="/category" class="btn btn-secondary">back</a>
+                      <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+          
+                  </div>
+                </form>
+            </div>
         </div>
-      </form>
     </div>
   </body>
 </html>
