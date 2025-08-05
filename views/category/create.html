@@ -44,30 +44,28 @@
     <!-- end navbar -->
 
     <div class="container mt-3">
-      <h2>List Category</h2>
+      <h2>Create Category</h2>
       <hr />
-      <a href="/categoriera/add" class="btn btn-primary"> Add Category </a>
 
-      <table class="table table-bordered mt-2 text-center">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+      <form action="/category/add">
+        <div class="mb-3">
+          <label class="form-label"
+            >Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="Enter category name"
+            autocomplete="off"
+          />
+          <div class="float-end">
+            <a href="/category" class="btn btn-secondary">back</a>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
 
-        <tbody>
-          {{ range .categories }}
-          <tr>
-            <td>{{ .Name }}</td>
-            <td>
-                <a href="/category/edit?id={{ .Id }}" class="btn btn-warning text-light">Edit</a>
-                <a href="/category/delete?id={{ .Id }}" class="btn btn-danger text-light" onclick="return confirm('Are you sure want to delete ?')">Delete</a>
-            </td>
-          </tr>
-          {{ end }}
-        </tbody>
-      </table>
+        </div>
+      </form>
     </div>
   </body>
 </html>
